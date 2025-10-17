@@ -5,21 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TO DO LIST</title>
     <link rel="stylesheet" href="/styles.css">
-    <script src="scipt.js" defer></script>
 </head>
 <body>
-    <div class="todo">
+    <div class="todo" data-js-todo>
         <h1 class="todo__title">To Do List</h1>
         <form  class="todo__form">
             <div class="todo__field">
-                <input class="todo__heading" name="heading" data-js-heading>
-                <input class="todo__body" name="body" data-js-body>
+                <div class="todo-heading__container">
+                    <p class="todo-heading__text">Заголовок</p>
+                    <input class="todo__heading" name="heading" data-js-heading-input>
+                </div>
+               <div class="todo-body__container">
+                    <p class="todo-body__text">Содержимое</p>
+                    <input class="todo__body" name="body" data-js-body-input>
+               </div>
+                
             </div>
-            <button class="button" data-js-button>Add</button>
+            <button class="button" type="submit" data-js-button>Add</button>
         </form>
-        <ul data-js-ul>
+        <ul class="todo__list" data-js-list>
 
+            
         </ul>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
